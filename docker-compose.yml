@@ -1,0 +1,8 @@
+services:
+  geocoder:
+    image: ghcr.io/astral-sh/uv:python3.12-alpine
+    command: uv run --directory=/app server.py
+    ports:
+      - 7878:7777
+    volumes:
+      - /home/abel/local-geocode:/app
